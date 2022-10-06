@@ -14,3 +14,4 @@ edit .env file and set DB_DATABASE with the db created
  5. `` run php artisan serve``
 
 That's it the server will be launched in avaialble port by laravel
+Testing Jenkins
