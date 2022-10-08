@@ -15,3 +15,4 @@ edit .env file and set DB_DATABASE with the db created
 
 That's it the server will be launched in avaialble port by laravel
 Testing Jenkins
+01
