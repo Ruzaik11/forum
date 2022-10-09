@@ -31,7 +31,9 @@ pipeline {
             }
         }
         stage('deploy'){
-             sh 'ls -a'
+            steps{
+                sh 'ls -a'
+            }
         }
     }
 }
