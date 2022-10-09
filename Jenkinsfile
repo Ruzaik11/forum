@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sh ls -a 
+                echo "hello world"
             }
         }
     }
