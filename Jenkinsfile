@@ -1,13 +1,14 @@
 
 pipeline {
-    agent {
-        node {
-            label 'forum-node'
-            customWorkspace '/home/ruzaik/sites/forum'
-        }
-    }
+    agent none
     stages {
         stage('Build') {
+            agent {
+                node {
+                    label 'forum-node'
+                    customWorkspace '/home/ruzaik/sites/forum'
+                }
+            }
             steps {
 
                sh 'composer update' // updating composer
@@ -24,6 +25,12 @@ pipeline {
             }
         }
         stage('test'){
+            agent {
+                node {
+                    label 'forum-node'
+                    customWorkspace '/home/ruzaik/sites/forum'
+                }
+            }
             steps{
 
                sh 'vendor/bin/phpunit' //running php unit test
@@ -31,6 +38,12 @@ pipeline {
             }
         }
         stage('deploy'){
+            agent {
+                node {
+                    label 'forum-node'
+                    customWorkspace '/home/ruzaik/sites/forum'
+                }
+            }
             steps{
                 sh 'ls -a'
             }
