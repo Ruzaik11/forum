@@ -3,13 +3,13 @@ pipeline {
     agent {
         node {
             label 'forum-node'
-            customWorkspace '/home/ruzaik/custom'
+            customWorkspace '/home/ruzaik/sites/forum'
         }
     }
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo "hello world"
+                sh ls 
             }
         }
     }
