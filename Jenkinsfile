@@ -3,7 +3,7 @@ pipeline {
     agent {
         node {
             label forum-node
-            customWorkspace '/home/ruzaik/custom/'
+            customWorkspace '/home/ruzaik/custom'
         }
     }
     stages {
