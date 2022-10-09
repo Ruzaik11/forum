@@ -1,11 +1,10 @@
 
 pipeline {
-    agent any
-
+    agent forum-node
     stages {
         stage('Hello') {
             steps {
-                echo pwd
+                ls -a 
             }
         }
     }
