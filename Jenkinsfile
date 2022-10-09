@@ -1,10 +1,6 @@
 
 pipeline {
-    agent {
-        node {
-            label forum-node
-        }
-    }
+    agent any
     stages {
         stage('Example') {
             steps {
