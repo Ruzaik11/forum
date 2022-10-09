@@ -32,9 +32,10 @@ pipeline {
                 }
             }
             steps{
-
+                
+               sh 'php artisan key:generate' //generating app key
                sh 'vendor/bin/phpunit' //running php unit test
-
+                
             }
         }
         stage('deploy'){
