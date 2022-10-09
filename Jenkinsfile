@@ -1,6 +1,10 @@
 
 pipeline {
-    agent any
+    agent {
+        node {
+            label 'forum-node'
+        }
+    }
     stages {
         stage('Hello') {
             steps {
