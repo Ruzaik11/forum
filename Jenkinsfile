@@ -1,10 +1,15 @@
 
 pipeline {
-    agent any
+    agent {
+        node {
+            label forum-node
+            customWorkspace '/home/ruzaik/custom/'
+        }
+    }
     stages {
-        stage('Example') {
+        stage('Hello') {
             steps {
-                echo 'Hello World'
+                sh ls -a 
             }
         }
     }
