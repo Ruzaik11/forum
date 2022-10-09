@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                 ls -a 
+                echo "cool"
             }
         }
     }
