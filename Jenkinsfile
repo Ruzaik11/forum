@@ -1,7 +1,7 @@
 
 pipeline {
     agent {
-        node{
+        node {
             label forum-node
             customWorkspace '/home/ruzaik/custom/'
         }
