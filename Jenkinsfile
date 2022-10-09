@@ -3,14 +3,12 @@ pipeline {
     agent none
     stages {
         stage('Build') {
-            agent{
-                 {
+            agent {
                     node {
                         label 'forum-node'
                         customWorkspace '/home/ruzaik/sites/forum'
                     }
                 }
-            }
             steps {
                
                sh 'composer update' // updating composer
@@ -30,11 +28,9 @@ pipeline {
         }
         stage('test'){
             agent{
-                 {
-                    node {
-                        label 'forum-node'
-                        customWorkspace '/home/ruzaik/sites/forum'
-                    }
+                node {
+                    label 'forum-node'
+                    customWorkspace '/home/ruzaik/sites/forum'
                 }
             }
             steps{
