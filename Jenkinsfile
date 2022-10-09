@@ -1,6 +1,6 @@
 
 pipeline {
-    agent forum-node
+    agent any
     stages {
         stage('Hello') {
             steps {
