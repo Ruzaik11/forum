@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                
-               sh 'composer update', // updating composer
+               sh 'composer update' // updating composer
                sh 'php artisan key:generate' //generating app key
                sh 'chmod -R 777 storage bootstrap/cache' //chaning the storage folder permission
 
