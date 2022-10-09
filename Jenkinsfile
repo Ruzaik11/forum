@@ -42,7 +42,7 @@ pipeline {
             agent {
                 node {
                     label 'forum-node'
-                    customWorkspace '/home/ruzaik/sites/forum'
+                    customWorkspace '/var/www/html/forum'
                 }
             }
             steps{
