@@ -20,6 +20,8 @@ pipeline {
                /* Updating Env File With Testing Database Details */
                sh "sed -i 's/DB_CONNECTION=mysql/DB_CONNECTION=sqlite/' .env"
                sh "sed -i 's|DB_DATABASE=laravel|DB_DATABASE=database/database.sqlite|' .env"
+                
+               sh "php artisan migrate"
 
             }
         }
