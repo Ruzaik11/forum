@@ -6,7 +6,7 @@ pipeline {
             agent {
                 node {
                     label 'forum-node'
-                    customWorkspace '/var/www/html/dev'
+                    customWorkspace '/var/www/html/forum/dev'
                 }
             }
             steps {
@@ -28,7 +28,7 @@ pipeline {
             agent {
                 node {
                     label 'forum-node'
-                    customWorkspace '/var/www/html/dev'
+                    customWorkspace '/var/www/html/forum/dev'
                 }
             }
             steps{
@@ -42,7 +42,7 @@ pipeline {
             agent {
                 node {
                     label 'forum-node'
-                    customWorkspace '/var/www/html/prod'
+                    customWorkspace '/var/www/html/forum/prod'
                 }
             }
             steps {
