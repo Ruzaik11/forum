@@ -2,7 +2,7 @@
 pipeline {
     agent none
     stages {
-        stage('Build') {
+        stage('Dev') {
             agent {
                 node {
                     label 'forum-node'
@@ -24,7 +24,7 @@ pipeline {
 
             }
         }
-        stage('test'){
+        stage('devTest'){
             agent {
                 node {
                     label 'forum-node'
@@ -38,7 +38,7 @@ pipeline {
                 
             }
         }
-        stage('deploy'){
+        stage('Prod'){
             agent {
                 node {
                     label 'forum-node'
@@ -58,6 +58,20 @@ pipeline {
                sh "sed -i 's/DB_CONNECTION=mysql/DB_CONNECTION=sqlite/' .env"
                sh "sed -i 's|DB_DATABASE=laravel|DB_DATABASE=database/database.sqlite|' .env"
 
+            }
+        }
+         stage('prodTest'){
+            agent {
+                node {
+                    label 'forum-node'
+                    customWorkspace '/var/www/html/forum/prod'
+                }
+            }
+            steps{
+                
+               sh 'php artisan key:generate' //generating app key
+               sh 'vendor/bin/phpunit' //running php unit test
+                
             }
         }
     }
