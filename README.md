@@ -5,7 +5,7 @@ This is a sample online forum website backend api completed using repopository p
 
 edit .env file and set DB_DATABASE with the db created
 
-**Commands to run in project directory**
+**Commands to run in project directory **
 
  1. `` composer install``
  2. `` run php artisan optimize ``
